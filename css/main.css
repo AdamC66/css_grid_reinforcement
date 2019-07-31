@@ -143,6 +143,8 @@ a {
 
 /* TODO 3 */
 .main-block {
+  max-width: 1200px;
+  margin: 0 auto;
   /* Restrict the maximum width of the .main-block to 1200px,
   then ensure that block is centered within the layout */
   /* Hint: how do you center a block element? */
@@ -212,6 +214,7 @@ a {
 
   .lessons-grid {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     /* TODO 1 */
     /* 2 column template! (1 fraction each) */
     /* Use this as a reminder of the syntax:
@@ -221,6 +224,8 @@ a {
     /* set a grid-gap of 1em 
     and make sure to remove the margin on each .lesson
     to get an evenly spaced layout. */
+    margin: 0;
+    grid-gap: 1em;
   }
 
 }
@@ -247,6 +252,9 @@ a {
   .lessons-grid {
     /* TODO 2 */
     /* 4 column template! (1 fraction each) */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
   }
 
   /* TODO 4 */
@@ -261,6 +269,29 @@ a {
   /* Hint: Don't think about shrinking the last two elements into the single column,
   but instead think about stretching the first two across the template. */
 
+.main-block{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.main-header{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.lessons{
+  grid-column-start:1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  margin:0;
+}
+.grading{
+  grid-column-start: 1;
+  grid-column-end: 2;
 
+}
+.topics{
+  grid-column-start: 2;
+  grid-column-end: 3;
+ 
+}
 
 }
